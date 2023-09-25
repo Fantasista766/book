@@ -26,6 +26,25 @@ By default, `forge install` installs the latest master branch version. If you wa
 $ forge install transmissions11/solmate@v7
 ```
 
+#### Windows OS      
+
+To add a dependency, you need to do the following:
+1. Navigate to your project's root directory.
+2. Add git repository to as a submodule using `git add submodule` command:
+
+```sh
+git submodule add https://github.com/Uniswap/v3-periphery lib/v3-periphery
+```
+
+3. Initialize and submit submodule^
+```sh
+
+git submodule init
+git submodule update
+```
+
+Now the corresponding library has to appear in your `lib` folder. If not, it can be in your project's root directory, and you can move it to `lib` directory manually, and everything will work properly (at least it worked for me :))
+
 ### Remapping dependencies
 
 Forge can remap dependencies to make them easier to import. Forge will automatically try to deduce some remappings for you:
